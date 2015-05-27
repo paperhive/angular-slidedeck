@@ -1,0 +1,52 @@
+// from angular
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+
+body {
+  background: black;
+}
+
+.slides {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: block;
+  width: 1000px;
+  height: 562px;
+  margin-left: -500px;
+  margin-top: -281px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  overflow: hidden;
+  transition: opacity ease 0.5s;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.slide-body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  background-color: white;
+  padding: 40px;
+}
+
+.slide.ng-enter, .slide.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+.slide.ng-leave, .slide.ng-enter.ng-enter-active {
+  opacity: 1;
+}
