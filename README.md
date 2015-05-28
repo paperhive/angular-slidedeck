@@ -6,7 +6,7 @@ Head over to [the example](https://github.com/paperhive/angular-slidedeck-exampl
 
 ## What does `angular-slidedeck` provide?
  * the native AngularJS module `ngSlidedeck`
- * the directives `<slides>` and `<slide>`
+ * the directives `<slides>` and `<slide>`, see [the code](#how-does-the-code-look-like)
  * a mechanism to change the current slide via a scope variable
  * animation support via `ngAnimate` (AngularJS core module)
  * you're able to use all AngularJS directives in your slides!
