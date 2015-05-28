@@ -7,14 +7,14 @@
 
 angular.module('ngSlidedeck', ['ngSlidedeckTemplates', 'ngAnimate'])
 
-  .directive('slides', function($document) {
+  .directive('slides', ['$document', function($document) {
     return {
       restrict: 'E',
       scope: {
       },
       transclude: true,
       templateUrl: 'ngSlidedeckTemplates/slides.html',
-      controller: function($scope) {
+      controller: ['$scope', function($scope) {
         var slides = $scope.slides = [];
 
         var setSlideIndex = function(index, oldIndex) {
@@ -54,9 +54,9 @@ angular.module('ngSlidedeck', ['ngSlidedeckTemplates', 'ngAnimate'])
             }
           }
         });
-      }
+      }]
     };
-  })
+  }])
 
   .directive('slide', function() {
     return {
