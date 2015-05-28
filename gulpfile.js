@@ -44,7 +44,7 @@ gulp.task('templates', function() {
 // minify js
 gulp.task('js-min', ['js'], function() {
   return gulp.src('dist/angular-slidedeck.js')
-    .pipe(rename('angular-slidedeck.js.min'))
+    .pipe(rename('angular-slidedeck.min.js'))
     .pipe(uglify({preserveComments: 'some'}))
     .pipe(gulp.dest('dist'));
 });
@@ -60,7 +60,7 @@ gulp.task('css', function() {
 // minify css
 gulp.task('css-min', ['css'], function() {
   return gulp.src('dist/angular-slidedeck.css')
-    .pipe(rename('angular-slidedeck.css.min'))
+    .pipe(rename('angular-slidedeck.min.css'))
     .pipe(minifyCSS({restructuring: false}))
     .pipe(gulp.dest('dist'));
 });
