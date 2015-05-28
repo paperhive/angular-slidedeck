@@ -17,9 +17,7 @@ Head over to [the example](https://github.com/paperhive/angular-slidedeck-exampl
 ```
 <slides>
   <slide>
-    <div class="slide-body">
-      <h1>Welcome to Darth Vader's slide deck</h1>
-    </div>
+    <h1>Welcome to Darth Vader's slide deck</h1>
   </slide>
   ...
 </slides>
