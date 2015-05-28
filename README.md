@@ -1,8 +1,8 @@
 # angular-slidedeck
 Create presentation slides – the AngularJS way!
 
-## Example
-Head over to [the example](https://github.com/paperhive/angular-slidedeck-example).
+## Example and live demo
+Head over to the [example](https://github.com/paperhive/angular-slidedeck-example) or the [example live demo](https://paperhive.github.io/angular-slidedeck-example/).
 
 ## What does `angular-slidedeck` provide?
  * the native AngularJS module `ngSlidedeck`
