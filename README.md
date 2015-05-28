@@ -24,3 +24,26 @@ Head over to [the example](https://github.com/paperhive/angular-slidedeck-exampl
   ...
 </slides>
 ```
+
+## Install
+```
+bower install angular-slidedeck
+```
+Add `angular-slidedeck` to your `<head>`:
+```
+<script src="bower_components/angular-slidedeck/angular-slidedeck.min.js"></script>
+<link rel="stylesheet" href="bower_components/angular-slidedeck/angular-slidedeck.min.css">
+```
+Then inject the `ngSlidedeck` module to your AngularJS app:
+```
+angular.module('myApp', ['ngSlidedeck']);
+```
+### Dependencies
+```
+bower install angular angular-animate
+```
+Add dependencies to your `<head>`:
+```
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+```
