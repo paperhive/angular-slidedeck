@@ -18,7 +18,7 @@ body {
   height: 100%;
 }
 
-.slide {
+.slide, .slide-background {
   display: block;
   width: 1000px;
   height: 562px;
@@ -30,7 +30,11 @@ body {
   overflow: hidden;
   transition: opacity ease 0.5s;
   border-radius: 10px;
+}
+
+.slide-background {
   background-color: white;
+  border: 1px solid transparent;
 }
 
 .slide-body {
