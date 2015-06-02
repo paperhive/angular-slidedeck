@@ -1,6 +1,6 @@
 {
   "name": "angular-slidedeck",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Create presentation slides – the AngularJS way!",
   "main": "index.js",
   "scripts": {
