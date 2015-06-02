@@ -14,25 +14,38 @@ angular.module('ngSlidedeck', ['ngSlidedeckTemplates', 'ngAnimate'])
       },
       transclude: true,
       templateUrl: 'ngSlidedeckTemplates/slides.html',
-      controller: ['$scope', function($scope) {
+      controller: ['$scope', '$location', function($scope, $location) {
+        // watch URL search part
+        $scope.$watch(function() {
+          return $location.search();
+        }, function(val) {
+          val = Number.parseInt(val.slide);
+          if (Number.isNaN(val)) {
+            val = 1;
+          }
+          $scope.slideIndex = val - 1;
+        });
+
         var slides = $scope.slides = [];
 
         var setSlideIndex = function(index, oldIndex) {
+          if (oldIndex !== undefined &&
+              oldIndex >= 0 && oldIndex < slides.length) {
+            slides[oldIndex].selected = false;
+          }
           if (index === undefined || index < 0 || index >= slides.length) {
             return;
           }
-          if (oldIndex !== undefined) {
-            slides[oldIndex].selected = false;
-          }
           slides[index].selected = true;
           $scope.slideIndex = index;
+          $location.search({slide: index + 1});
         };
         $scope.$watch('slideIndex', setSlideIndex);
 
         this.addSlide = function(slide) {
           slides.push(slide);
-          if (slides.length === 1) {
-            setSlideIndex(0);
+          if (slides.length === $scope.slideIndex + 1) {
+            setSlideIndex($scope.slideIndex);
           }
         };
 
